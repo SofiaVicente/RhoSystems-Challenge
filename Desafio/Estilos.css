@@ -1,0 +1,315 @@
+body {
+    margin: 0;
+    font-family: "Helvetica Neue";
+    z-index: 0;
+
+}
+
+/*looder*/
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid dimgray;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+#myDiv {
+    display: none;
+    text-align: center;
+}
+
+
+.header {
+    background-color: gray;
+    height: 7vh;
+    width: 100%;
+    position: fixed;
+
+}
+
+.main {
+
+    position: absolute;
+    margin-top: 7vh;
+    z-index: -1;
+}
+
+
+/* general menu */
+
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1224px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar {
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    width: 30%;
+}
+
+.nav-link {
+    transition: 0.3s ease-out;
+}
+
+.nav-link:hover {
+    color: yellow;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+/* Hamburguer Menu*/
+@media (max-width: 1024px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 20px;
+        gap: 0;
+        flex-direction: column;
+        background-color: gray;
+        width: 50%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 60px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+
+    }
+
+    .FullMenu {
+        height: 100vh;
+
+    }
+}
+
+/* Text */
+
+.SEOtext {
+    text-align: left;
+    width: 90%;
+    margin-left: 5%;
+
+}
+
+/* Grid links */
+
+.grid-containerbuttons {
+    display: grid;
+    column-gap: 4vw;
+    row-gap: 4vh;
+    grid-template-columns: auto auto auto auto;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.grid-itembuttons {
+
+    padding: 10px;
+    text-align: center;
+}
+
+.button {
+    border: none;
+    background-color: lightgrey;
+
+}
+
+.button:hover {
+    background-color: white;
+
+}
+
+.grid-itembuttons:hover {
+    background-color: white;
+
+}
+
+/* Grid Games*/
+
+.grid-container {
+
+    display: grid;
+    column-gap: 4vw;
+    row-gap: 2vh;
+    grid-template-columns: auto auto auto auto;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 4vh;
+
+}
+
+.grid-item {
+    background-color: lightgrey;
+    padding: 25px;
+    height: 2vh;
+    border-radius: 35%;
+}
+
+#menu {
+
+    padding: 50px;
+    background-color: red;
+    position: absolute;
+    z-index: 9;
+}
+
+/* Desktop */
+
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+
+    .header {
+        background-color: gray;
+        height: 12vh;
+        width: 100%;
+        position: fixed;
+        z-index: 5;
+    }
+
+    /* beside menu*/
+    .navbar {
+
+        justify-content: space-between;
+        align-items: center;
+        width: 20%;
+        position: fixed;
+        height: 100vh;
+        margin-top: 12vh;
+        float: left;
+        margin-left: -5%;
+        background-color: darkgrey;
+    }
+
+    .nav-menu {
+
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        background-color: darkgrey;
+        margin-left: 20%;
+        margin-top: -30vh;
+
+    }
+
+    .nav-item {
+        margin: 60px 0;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: white;
+    }
+
+    /* body contents*/
+    .main {
+        margin-left: 19%;
+        width: 82%;
+        position: absolute;
+        margin-top: 12vh;
+    }
+
+    /* Grid buttons*/
+    .grid-containerbuttons {
+        display: grid;
+        column-gap: 2vw;
+        row-gap: 7px;
+        grid-template-columns: auto auto auto auto;
+        width: 44%;
+        margin-left: 5%;
+    }
+
+    /* Grid Games*/
+    .grid-container {
+
+        display: grid;
+        column-gap: 2vw;
+        row-gap: 2vh;
+        grid-template-columns: auto auto auto auto auto auto auto auto;
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 4vh;
+
+    }
+
+    .grid-item {
+        background-color: lightgrey;
+        padding: 35px;
+        height: 2vh;
+        border-radius: 35%;
+    }
+
+}
